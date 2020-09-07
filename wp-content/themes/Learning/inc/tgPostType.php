@@ -1,0 +1,51 @@
+<?php
+
+// Custom Post Types
+
+$labels = array(
+    'name' => 'services',
+    'singular_name' => 'service',
+    'menu_name' => 'services',
+    'name_admin_bar' => 'services',
+    'archives' => 'service Archives',
+    'attributes' => 'Item Attributes',
+    'parent_item_colon' => 'Parent Item:',
+    'all_items' => 'Tous les services',
+    'add_new_item' => 'Ajouter un nouveau service',
+    'add_new' => 'Ajouter',
+    'new_item' => 'Nouveau service',
+    'edit_item' => 'Modifier le service',
+    'update_item' => 'Mettre à jour le service',
+    'view_item' => 'Voir le service',
+    'view_items' => 'Voir les services',
+    'search_items' => 'Search Item',
+    'not_found' => 'Not found',
+    'not_found_in_trash' => 'Not found in Trash',
+    'featured_image' => 'Image à la une',
+    'set_featured_image' => 'Image principale',
+    'remove_featured_image' => 'Remove featured image',
+    'use_featured_image' => 'Use as featured image',
+    'insert_into_item' => 'Insert into item',
+    'uploaded_to_this_item' => 'Uploaded to this item',
+    'items_list' => 'Items list',
+    'items_list_navigation' => 'Items list navigation',
+    'filter_items_list' => 'Filter items list',
+);
+$args = array(
+    'label' => 'service',
+    'labels' => $labels,
+    'supports' => array('title', 'editor', 'thumbnail'),
+    'hierarchical' => false,
+    'public' => true,
+    'show_ui' => true,
+    'show_in_menu' => true,
+    'menu_position' => 5,
+    'menu_icon' => 'dashicons-products',
+    'show_in_admin_bar' => true,
+    'show_in_nav_menus' => true,
+    'can_export' => true,
+    'has_archive' => true,
+    'exclude_from_search' => false,
+    'publicly_queryable' => false,
+);
+register_post_type('service', $args);
